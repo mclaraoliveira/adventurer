@@ -1,0 +1,156 @@
+body {
+    background-color: #f9ce89;
+    margin: 0;
+}
+
+header {
+    background-color: #f8ce77;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333b3e;
+    position: static;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+}
+
+.menu h1 {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #333b3e;
+}
+
+a:visited {
+    color: #333b3e;
+}
+
+.list-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-grow: 1;
+}
+
+.iniciar-aventura {
+    margin-left: auto;
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #ff9800;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.iniciar-aventura:hover {
+    background-color: #e68900;
+}
+
+.inicio {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.inicio-conteudo {
+    color: #333b3e;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 50%;
+    margin-left: 30px;
+}
+
+.inicio h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.inicio p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.imagem-inicio {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagem-inicio img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 0;
+}
+
+.highlight {
+    color: #ff9800;
+}
+
+.form-container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+input {
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+}
+
+.porque {
+    background-color: rgba(235, 235, 235, 0.61);
+    font-family: Arial, Helvetica, sans-serif;
+    height: 180px;
+    width: 95%;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.lista-porques {
+    color: #333b3e;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+}
+
+.lista-porques li {
+    text-align: center;
+}
+
+.lista-porques h2 {
+    margin: 0;
+    padding: 5px;
+}
