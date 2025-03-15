@@ -1,11 +1,11 @@
 body {
     background-color: #f9ce89;
     margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 header {
     background-color: #f8ce77;
-    font-family: Arial, Helvetica, sans-serif;
     color: #333b3e;
     position: static;
     top: 0;
@@ -48,14 +48,15 @@ a:visited {
 .iniciar-aventura {
     margin-left: auto;
     display: inline-block;
-    padding: 12px 20px;
+    padding: 12px 24px;
     background-color: #ff9800;
     color: white;
     text-decoration: none;
     font-weight: bold;
-    border-radius: 5px;
+    border-radius: 8px;
     text-align: center;
     transition: background-color 0.3s ease;
+    min-width: 150px;
 }
 
 .iniciar-aventura:hover {
@@ -66,9 +67,10 @@ a:visited {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    padding: 40px 60px;
+    margin: 50px 0;
+    gap: 40px;
+    min-width: 800px;
 }
 
 .inicio-conteudo {
@@ -76,23 +78,24 @@ a:visited {
     display: flex;
     flex-direction: column;
     text-align: start;
-    font-family: Arial, Helvetica, sans-serif;
-    width: 50%;
-    margin-left: 30px;
+    flex: 1;
+    max-width: 60%;
 }
 
 .inicio h1 {
     font-size: 2.5rem;
-    margin-bottom: 10px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
 }
 
 .inicio p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
 }
 
 .imagem-inicio {
-    width: 50%;
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -101,7 +104,6 @@ a:visited {
 .imagem-inicio img {
     max-width: 100%;
     height: auto;
-    margin-top: 0;
 }
 
 .highlight {
@@ -116,17 +118,22 @@ a:visited {
 }
 
 input {
-    padding: 10px;
-    margin: 10px 0;
+    padding: 12px 15px;
     font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 200px;
+    border: none;
+    border-radius: 8px;
+    width: 180px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .porque {
     background-color: rgba(235, 235, 235, 0.61);
-    font-family: Arial, Helvetica, sans-serif;
     height: 180px;
     width: 95%;
     border-radius: 15px;
@@ -153,4 +160,64 @@ input {
 .lista-porques h2 {
     margin: 0;
     padding: 5px;
+}
+
+/* Media Queries*/
+@media (max-width: 768px) {
+    .inicio {
+        flex-direction: column;
+        padding: 20px 30px;
+        gap: 20px;
+        min-width: 0;
+    }
+
+    .inicio-conteudo {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .form-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    input {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .iniciar-aventura {
+        width: 100%;
+        max-width: 300px;
+        min-width: 0; 
+    }
+
+    .menu {
+        flex-direction: column;
+        padding: 0 20px;
+    }
+
+    .list-items {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .iniciar-aventura {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .inicio {
+        padding: 20px;
+    }
+
+    .inicio h1 {
+        font-size: 2.5rem; 
+    }
+
+    .inicio p {
+        font-size: 1rem;
+    }
 }
