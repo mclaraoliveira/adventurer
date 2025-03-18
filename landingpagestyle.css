@@ -162,6 +162,25 @@ input:focus {
     padding: 5px;
 }
 
+.melhores-destinos {
+    text-align: center;
+    background-color: #333b3e;
+    color: white;
+}
+
+.imagens-melhores-destinos {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.imagens-melhores-destinos img {
+    border-radius: 10px;
+    width: 300px;
+    height: auto;
+}
+
+
 /* Media Queries*/
 @media (max-width: 768px) {
     .inicio {
