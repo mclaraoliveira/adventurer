@@ -67,7 +67,7 @@ a:visited {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 40px 60px;
+    padding: 120px 60px;
     margin: 50px 0;
     gap: 40px;
     min-width: 800px;
@@ -164,8 +164,10 @@ input:focus {
 
 .melhores-destinos {
     text-align: center;
-    background-color: #333b3e;
+    background-color: #141414;
     color: white;
+    padding: 40px 60px 300px;
+    margin: 50px 0;
 }
 
 .imagens-melhores-destinos {
@@ -175,9 +177,15 @@ input:focus {
 }
 
 .imagens-melhores-destinos img {
-    border-radius: 10px;
+    border-radius: 12px;
     width: 300px;
     height: auto;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease-in-out;
+}
+
+.imagens-melhores-destinos img:hover {
+    filter: grayscale(0%);
 }
 
 
