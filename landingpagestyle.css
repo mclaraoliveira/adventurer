@@ -1,5 +1,5 @@
 body {
-    background-color: #f9ce89;
+
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -12,13 +12,14 @@ header {
     left: 0;
     width: 100%;
     padding: 10px 0;
+    height: 12vh;
 }
 
 .menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 50px;
+    padding: 10px 50px;
 }
 
 .menu h1 {
@@ -41,8 +42,21 @@ a:visited {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 50px;
     flex-grow: 1;
+}
+
+.inicie-sua-aventura {
+    margin-left: auto;
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #ffc107;
+    color: black;
+    text-decoration: none;
+    border-radius: 8px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    min-width: 100px;
 }
 
 .iniciar-aventura {
@@ -52,11 +66,10 @@ a:visited {
     background-color: #ff9800;
     color: white;
     text-decoration: none;
-    font-weight: bold;
     border-radius: 8px;
     text-align: center;
     transition: background-color 0.3s ease;
-    min-width: 150px;
+    min-width: 120px;
 }
 
 .iniciar-aventura:hover {
@@ -64,11 +77,11 @@ a:visited {
 }
 
 .inicio {
+    background-color: #f9ce89;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 120px 60px;
-    margin: 50px 0;
+    padding: 170px 60px;
     gap: 40px;
     min-width: 800px;
 }
@@ -132,34 +145,65 @@ input:focus {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
+.fundo-porque {
+    background-color: #f9ce89;
+    padding: 20px 0;
+}
+
 .porque {
     background-color: rgba(235, 235, 235, 0.61);
-    height: 180px;
     width: 95%;
+    height: 200px;
     border-radius: 15px;
     padding: 20px;
     margin: 0 auto;
-    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.porque-titulo {
+    text-align: left;
+    margin: 0 0 20px 0;
+    font-size: 1.5em;
 }
 
 .lista-porques {
-    color: #333b3e;
     list-style-type: none;
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: nowrap;
 }
 
 .lista-porques li {
+    flex: 1;
     text-align: center;
+    padding: 0 15px;
 }
 
-.lista-porques h2 {
+.item-porque {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icone {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.lista-porques h3 {
     margin: 0;
     padding: 5px;
+    font-size: 1.2em;
+}
+
+.lista-porques p {
+    margin: 5px 0 0 0;
+    font-size: 0.9em;
 }
 
 .melhores-destinos {
@@ -167,7 +211,7 @@ input:focus {
     background-color: #141414;
     color: white;
     padding: 40px 60px 300px;
-    margin: 50px 0;
+    margin-bottom: 0;
 }
 
 .imagens-melhores-destinos {
@@ -186,8 +230,132 @@ input:focus {
 
 .imagens-melhores-destinos img:hover {
     filter: grayscale(0%);
+    cursor: pointer;
 }
 
+.como-podemos {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: auto auto;
+    gap: 20px;
+    background: linear-gradient(to right, white, rgb(219, 219, 219));
+    padding: 60px 100px;
+    margin: 0 auto; 
+}
+
+.conteudo-como-podemos {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: center;
+}
+
+.imagem-como-podemos {
+    grid-column: 1; 
+    grid-row: 1; 
+    align-self: start; 
+    text-align: center; 
+}
+
+.estatisticas {
+    grid-column: 1;
+    grid-row: 2; 
+    align-self: start;
+}
+
+.imagem-grupo {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: start;
+    text-align: center;
+}
+
+.imagem-como-podemos img,
+.imagem-grupo img {
+    width: 350px; 
+    height: auto;
+}
+
+.estatisticas ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.estatisticas li {
+    flex: 1 1 30%; 
+    text-align: center;
+}
+
+.estatisticas li h2 {
+    margin: 0;
+    color: #f5a623;
+}
+
+.estatisticas li p {
+    margin: 5px 0 0 0;
+}
+
+.junte-se {
+    background: linear-gradient(to right, white, rgb(219, 219, 219));
+    padding: 60px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.junte-se-amarelo {
+    background-color: #f9ce89;
+    border-radius: 15px;
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    width: 100%;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.junte-se-imagem {
+    grid-column: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.junte-se-conteudo {
+    grid-column: 2 / span 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: start;
+}
+
+
+.junte-se-imagem img {
+    width: 100%;
+    height: auto;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease-in-out;
+}
+
+.junte-se-imagem img:hover {
+    filter: grayscale(0%);
+    cursor: pointer;
+}
+
+.junte-se-conteudo h2 {
+    margin-top: 0;
+    font-size: 1.7rem; 
+}
+
+.junte-se-conteudo p {
+    margin: 10px 0;
+    line-height: 1.6;
+    color: #555555;
+}
 
 /* Media Queries*/
 @media (max-width: 768px) {
