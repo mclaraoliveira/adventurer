@@ -42,9 +42,26 @@ a:visited {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 50px;
+    gap: 40px;
     flex-grow: 1;
 }
+
+.list-items li {
+    display: flex;
+    align-items: center;
+}
+
+.list-items li a {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.list-items li a:hover {
+    background-color: orange;
+}
+
 
 .inicie-sua-aventura {
     margin-left: auto;
@@ -57,6 +74,10 @@ a:visited {
     text-align: center;
     transition: background-color 0.3s ease;
     min-width: 100px;
+}
+
+.inicie-sua-aventura:hover {
+    background-color: #ff9800;
 }
 
 .iniciar-aventura {
@@ -220,18 +241,42 @@ input:focus {
     gap: 10px;
 }
 
-.imagens-melhores-destinos img {
-    border-radius: 12px;
-    width: 300px;
-    height: auto;
+.imagem-container {
+    position: relative;
     filter: grayscale(100%);
     transition: filter 0.3s ease-in-out;
 }
 
-.imagens-melhores-destinos img:hover {
+.imagem-container:hover {
     filter: grayscale(0%);
     cursor: pointer;
 }
+
+.imagem-wrapper {
+    position: relative;
+}
+
+.imagens-melhores-destinos img {
+    border-radius: 12px;
+    width: 300px;
+    height: auto;
+    display: block;
+}
+
+.nome-imagem {
+    position: absolute;
+    top: 10px; 
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.7); 
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px; 
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
 
 .como-podemos {
     display: grid;
