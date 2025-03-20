@@ -1,0 +1,294 @@
+body {
+
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: #f8ce77;
+    color: #333b3e;
+    position: static;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    height: 12vh;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+}
+
+.menu h1 {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #333b3e;
+}
+
+a:visited {
+    color: #333b3e;
+}
+
+.list-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-grow: 1;
+}
+
+.list-items li {
+    display: flex;
+    align-items: center;
+}
+
+.list-items li a {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.list-items li a:hover {
+    background-color: orange;
+}
+
+
+.inicie-sua-aventura {
+    margin-left: auto;
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #ffc107;
+    color: black;
+    text-decoration: none;
+    border-radius: 8px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    min-width: 100px;
+}
+
+.inicie-sua-aventura:hover {
+    background-color: #ff9800;
+}
+
+.contato {
+    background-color: #f9ce89;
+    padding: 20px;
+    text-align: center;
+    padding: 160px 60px;
+    gap: 40px;
+    min-width: 800px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color:#333
+}
+
+.form-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 800px; 
+    margin: 0 auto; 
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.textarea-group {
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+textarea {
+    height: 100%;
+    min-height: 120px;
+    resize: none;
+}
+
+button {
+    background-color: #ffbf00;
+    color: black;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 5px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+button:hover {
+    background-color: #ff9800;
+}
+
+footer {
+    background-color: #fff;
+    padding: 20px;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    grid-template-rows: auto; 
+    gap: 20px;
+    max-width: 1200px; 
+    margin: 0 auto;
+    bottom: 0;
+}
+
+li.bold {
+    font-weight: bold;
+}
+
+.servicos, .sobre, .carreira {
+    grid-row: 1;
+}
+
+.servicos {
+    grid-column: 1;
+}
+
+.sobre {
+    grid-column: 2;
+}
+
+.carreira {
+    grid-column: 3; 
+}
+
+.redes-e-copyright {
+    grid-column: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.redes-sociais {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 16px;
+}
+
+.redes-sociais a {
+    color: #666; 
+    font-size: 20px;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+p {
+    margin: 0;
+    color: #666;
+}
+
+@media (max-width: 480px) {
+    header {
+        background-color: #f8ce77;
+        padding: 10px 0;
+    }
+
+    .menu {
+        position: relative;
+    }
+
+    .menu h1 {
+        font-size: 30px;
+        margin-top: 25px;
+        margin-left: -20px;
+    }
+
+    .menu::after {
+        content: '\2630';
+        font-size: 30px;
+        font-weight: bold;
+        position: absolute;
+        top: 65%;
+        right: 40px;
+        transform: translateY(-50%);
+        cursor: pointer;
+        }
+
+    .list-items {
+        display: none;
+    }
+
+    .inicie-sua-aventura {
+        display: none;
+    }
+    
+    .contato {
+        padding: 15px 40px 120px;
+        min-width: unset;
+    }
+
+    .form-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    h1 {
+        margin-bottom: 40px;
+    }
+
+    button {
+        width: 40%;
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .servicos {
+        display: none;
+    }
+
+    .sobre {
+        display: none;
+    }
+
+    .carreira {
+        display: none;
+    }
+
+    .redes-e-copyright
+    {
+        margin-right: 150px;
+    }
+
+}

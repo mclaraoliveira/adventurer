@@ -183,11 +183,6 @@ input:focus {
     justify-content: center;
 }
 
-.porque-titulo {
-    text-align: left;
-    margin: 0 0 20px 0;
-    font-size: 1.5em;
-}
 
 .lista-porques {
     list-style-type: none;
@@ -263,6 +258,11 @@ input:focus {
     display: block;
 }
 
+.texto-melhores-destinos p {
+    color: white;
+    margin-bottom: 25px;
+}
+
 .nome-imagem {
     position: absolute;
     top: 10px; 
@@ -331,7 +331,7 @@ input:focus {
 
 .estatisticas li {
     flex: 1 1 30%; 
-    text-align: center;
+    text-align: start;
 }
 
 .estatisticas li h2 {
@@ -380,7 +380,7 @@ input:focus {
 
 
 .junte-se-imagem img {
-    width: 100%;
+    width: 400px;
     height: auto;
     filter: grayscale(100%);
     transition: filter 0.3s ease-in-out;
@@ -399,7 +399,76 @@ input:focus {
 .junte-se-conteudo p {
     margin: 10px 0;
     line-height: 1.6;
-    color: #555555;
+    color: #555;
+}
+
+footer {
+    background-color: #fff;
+    padding: 20px;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    grid-template-rows: auto; 
+    gap: 20px;
+    max-width: 1200px; 
+    margin: 0 auto;
+}
+
+li.bold {
+    font-weight: bold;
+}
+
+.servicos, .sobre, .carreira {
+    grid-row: 1;
+}
+
+.servicos {
+    grid-column: 1;
+}
+
+.sobre {
+    grid-column: 2;
+}
+
+.carreira {
+    grid-column: 3; 
+}
+
+.redes-e-copyright {
+    grid-column: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.redes-sociais {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 16px;
+}
+
+.redes-sociais a {
+    color: #666; 
+    font-size: 20px;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+p {
+    margin: 0;
+    color: #666;
 }
 
 /* Media Queries*/
@@ -432,11 +501,6 @@ input:focus {
         min-width: 0; 
     }
 
-    .menu {
-        flex-direction: column;
-        padding: 0 20px;
-    }
-
     .list-items {
         flex-direction: column;
         gap: 10px;
@@ -449,15 +513,217 @@ input:focus {
 }
 
 @media (max-width: 480px) {
+
+    header {
+        background-color: #f8ce77;
+        padding: 10px 0;
+    }
+
+    .menu {
+        position: relative;
+    }
+
+    .menu h1 {
+        font-size: 30px;
+        margin-top: 25px;
+        margin-left: -20px;
+    }
+
+    .menu::after {
+        content: '\2630';
+        font-size: 30px;
+        font-weight: bold;
+        position: absolute;
+        top: 65%;
+        right: 40px;
+        transform: translateY(-50%);
+        cursor: pointer;
+        }
+
+    .list-items {
+        display: none;
+    }
+
+    .inicie-sua-aventura {
+        display: none;
+    }
+    
     .inicio {
         padding: 20px;
     }
 
     .inicio h1 {
-        font-size: 2.5rem; 
+        font-size: 1.8rem; 
     }
 
     .inicio p {
         font-size: 1rem;
     }
+
+    .porque {
+        background-color: rgba(235, 235, 235, 0.61);
+        width: 85%;
+        height: 620px;
+        border-radius: 15px;
+        padding: 20px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .lista-porques {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .lista-porques li {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .melhores-destinos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        padding: 20px;
+        margin: 0;
+        box-sizing: border-box; 
+    }
+
+    .imagens-melhores-destinos {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        gap: 20px;
+    }
+
+    .imagem-container {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    .imagem-wrapper {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        
+    }
+
+    .imagem-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: bottom;
+    }
+
+    .nome-imagem {
+        margin-top: 8px;
+        font-size: 1em;
+    }
+
+    .como-podemos {
+        display: flex;
+        flex-direction: column;
+        padding: 40px 50px;
+    }
+
+    .conteudo-como-podemos p {
+        font-size: 1.2rem;
+    }
+
+    .imagem-como-podemos,
+    .imagem-grupo {
+        width: 100%;
+        text-align: center;
+    }
+
+    .imagem-como-podemos img,
+    .imagem-grupo img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .estatisticas {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .estatisticas ul {
+        justify-content: center;
+    }
+
+    .junte-se {
+            padding: 20px;
+            min-height: auto;
+        }
+    
+        .junte-se-amarelo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+    
+        .junte-se-imagem {
+            grid-column: auto;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+    
+        .junte-se-imagem img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+        }
+    
+        .junte-se-conteudo {
+            grid-column: auto;
+            text-align: center;
+            padding: 0 10px;
+        }
+    
+        .junte-se-conteudo h2 {
+            font-size: 1.9rem;
+            text-align: left;
+        }
+    
+        .junte-se-conteudo p {
+            text-align: left;
+            font-size: 1rem; 
+        }
+
+    .servicos {
+        display: none;
+    }
+
+    .sobre {
+        display: none;
+    }
+
+    .carreira {
+        display: none;
+    }
+
+    .redes-e-copyright
+    {
+        margin-right: 150px;
+    }
+
+
 }
