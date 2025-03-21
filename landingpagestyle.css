@@ -160,7 +160,7 @@ a:visited {
 }
 
 .imagem-inicio img {
-    max-width: 400px;
+    max-width: 480px;
     height: auto;
 }
 
@@ -586,7 +586,7 @@ p {
     }
 
     .imagem-inicio img {
-        max-width: 70%;
+        max-width: 480px;
         height: auto;
     }
 
@@ -783,7 +783,10 @@ p {
             font-size: 1rem;
         }
 
-
+        .imagem-inicio img {
+            max-width: 400px;
+            height: auto;
+        }
     
         .porque {
             background-color: rgba(235, 235, 235, 0.61);
