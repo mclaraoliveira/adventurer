@@ -11,7 +11,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 10px 0;
+    padding: 15px 0;
     height: 12vh;
 }
 
@@ -19,7 +19,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 50px;
+    padding: 0px 50px;
 }
 
 .menu h1 {
@@ -47,6 +47,7 @@ a:visited {
 }
 
 .list-items li {
+    
     display: flex;
     align-items: center;
 }
@@ -136,7 +137,7 @@ a:visited {
 }
 
 .imagem-inicio img {
-    max-width: 100%;
+    max-width: 400px;
     height: auto;
 }
 
@@ -473,11 +474,44 @@ p {
 
 /* Media Queries*/
 @media (max-width: 768px) {
+    header {
+        background-color: #f8ce77;
+        padding: 10px 0;
+        height: auto;
+    }
+
+    .menu {
+        flex-direction: row;
+        position: relative;
+        padding: 0px 20px;
+    }
+
+    .menu h1 {
+        font-size: 1.5rem;
+    }
+
+    .list-items {
+        display: flex;
+        flex-direction: row; 
+        gap: 15px; 
+    }
+
+    .list-items li a {
+        padding: 5px 8px;
+        font-size: 0.9rem;
+    }
+
+    .inicie-sua-aventura {
+        display: none;
+    }
+
     .inicio {
         flex-direction: column;
-        padding: 20px 30px;
+        padding: 30px 130px;
         gap: 20px;
         min-width: 0;
+        text-align: center;
+        box-sizing: border-box;
     }
 
     .inicio-conteudo {
@@ -485,161 +519,102 @@ p {
         text-align: center;
     }
 
+    .inicio h1 {
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+
+    .inicio p {
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+    }
+
     .form-container {
         flex-direction: column;
         gap: 10px;
+        align-items: center;
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
     }
 
     input {
         width: 100%;
-        max-width: 300px;
-    }
-
-    .iniciar-aventura {
-        width: 100%;
-        max-width: 300px;
-        min-width: 0; 
-    }
-
-    .list-items {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .iniciar-aventura {
-        margin-left: 0;
-        margin-top: 10px;
-    }
-}
-
-@media (max-width: 480px) {
-
-    header {
-        background-color: #f8ce77;
-        padding: 10px 0;
-    }
-
-    .menu {
-        position: relative;
-    }
-
-    .menu h1 {
-        font-size: 30px;
-        margin-top: 25px;
-        margin-left: -20px;
-    }
-
-    .menu::after {
-        content: '\2630';
-        font-size: 30px;
-        font-weight: bold;
-        position: absolute;
-        top: 65%;
-        right: 40px;
-        transform: translateY(-50%);
-        cursor: pointer;
-        }
-
-    .list-items {
-        display: none;
-    }
-
-    .inicie-sua-aventura {
-        display: none;
-    }
-    
-    .inicio {
-        padding: 20px;
-    }
-
-    .inicio h1 {
-        font-size: 1.8rem; 
-    }
-
-    .inicio p {
-        font-size: 1rem;
-    }
-
-    .porque {
-        background-color: rgba(235, 235, 235, 0.61);
-        width: 85%;
-        height: 620px;
-        border-radius: 15px;
-        padding: 20px;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .lista-porques {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .lista-porques li {
-        width: 100%;
-        padding: 10px 0;
-    }
-
-    .melhores-destinos {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        width: 100%;
-        padding: 20px;
-        margin: 0;
-        box-sizing: border-box; 
-    }
-
-    .imagens-melhores-destinos {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        padding: 0;
-        margin: 0;
-        gap: 20px;
-    }
-
-    .imagem-container {
-        width: 100%;
-        padding: 0;
-        margin: 0;
+        max-width: 350px;
+        padding: 10px;
         box-sizing: border-box;
     }
 
-    .imagem-wrapper {
+    .iniciar-aventura {
         width: 100%;
-        aspect-ratio: 4 / 3;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-        
+        max-width: 350px;
+        min-width: 0;
+        margin-left: 0;
+        margin-top: 10px;
+        padding: 10px;
+        box-sizing: border-box;
     }
 
-    .imagem-wrapper img {
+    .imagem-inicio {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .imagem-inicio img {
+        max-width: 70%;
+        height: auto;
+    }
+
+    .porque {
+        width: 90%;
+        height: 250px;
+    }
+
+    .melhores-destinos {
+        padding: 40px 30px; 
+    }
+    
+    .imagens-melhores-destinos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    
+    .imagem-container {
+        width: 100%;
+    }
+    
+    .imagem-wrapper {
+       width: 100%;
+       aspect-ratio: 2 / 2;
+       overflow: hidden;
+    }
+
+    
+    .imagens-melhores-destinos img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         object-position: bottom;
     }
 
-    .nome-imagem {
-        margin-top: 8px;
-        font-size: 1em;
-    }
-
     .como-podemos {
         display: flex;
         flex-direction: column;
-        padding: 40px 50px;
+    }
+
+    .conteudo-como-podemos {
+        padding: 10px;
     }
 
     .conteudo-como-podemos p {
         font-size: 1.2rem;
+        line-height: 150%;
     }
 
     .imagem-como-podemos,
@@ -664,66 +639,287 @@ p {
     }
 
     .junte-se {
-            padding: 20px;
-            min-height: auto;
-        }
-    
-        .junte-se-amarelo {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-            padding: 20px;
-            width: 100%;
-            max-width: 400px;
-            margin: 0 auto;
-        }
-    
-        .junte-se-imagem {
-            grid-column: auto;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-        }
-    
-        .junte-se-imagem img {
-            width: 100%;
-            max-width: 300px;
-            height: auto;
-        }
-    
-        .junte-se-conteudo {
-            grid-column: auto;
-            text-align: center;
-            padding: 0 10px;
-        }
-    
-        .junte-se-conteudo h2 {
-            font-size: 1.9rem;
-            text-align: left;
-        }
-    
-        .junte-se-conteudo p {
-            text-align: left;
-            font-size: 1rem; 
-        }
+        padding: 40px;
+        min-height: auto;
+    }
+
+    .junte-se-amarelo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+        width: 100%;
+        max-width: 650px;
+        margin: 0 auto;
+    }
+
+    .junte-se-imagem {
+        grid-column: auto;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .junte-se-imagem img {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+    }
+
+    .junte-se-conteudo {
+        grid-column: auto;
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    .junte-se-conteudo h2 {
+        font-size: 1.7rem;
+        text-align: left;
+    }
+
+    .junte-se-conteudo p {
+        text-align: left;
+        font-size: 1.2rem; 
+    }
+
+    .footer {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto auto;
+        padding: 30px;
+    }
 
     .servicos {
-        display: none;
+        grid-column: 1;
+        grid-row: 1;
+        text-align: center;
     }
 
     .sobre {
-        display: none;
+        grid-column: 2;
+        grid-row: 1;
+        text-align: center;
     }
 
     .carreira {
-        display: none;
+        grid-column: 3;
+        grid-row: 1;
+        text-align: center;
     }
 
-    .redes-e-copyright
-    {
-        margin-right: 150px;
+    .redes-e-copyright {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        text-align: center;
+        margin-top: 30px;
+    }
     }
 
 
-}
+    @media (max-width: 480px) {
+
+   
+        .menu {
+            position: relative;
+        }
+    
+        .menu h1 {
+            font-size: 30px;
+            margin-top: 25px;
+            padding-bottom: 10px;
+        }
+    
+        .menu::after {
+            content: '\2630';
+            font-size: 30px;
+            font-weight: bold;
+            position: absolute;
+            top: 57%;
+            right: 40px;
+            transform: translateY(-50%);
+            cursor: pointer;
+            }
+    
+        .list-items {
+            display: none;
+        }
+    
+        .inicie-sua-aventura {
+            display: none;
+        }
+        
+        .inicio {
+            padding: 40px;
+        }
+    
+        .inicio h1 {
+            font-size: 1.rem; 
+        }
+    
+        .inicio p {
+            font-size: 1rem;
+        }
+
+
+    
+        .porque {
+            background-color: rgba(235, 235, 235, 0.61);
+            width: 85%;
+            height: 620px;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    
+        .lista-porques {
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        .lista-porques li {
+            width: 100%;
+            padding: 10px 0;
+        }
+    
+        .melhores-destinos {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: 100%;
+            padding: 20px;
+            margin: 0;
+            box-sizing: border-box; 
+        }
+    
+        .imagens-melhores-destinos {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            gap: 20px;
+        }
+    
+        .imagem-container {
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+    
+        .imagem-wrapper {
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            
+        }
+    
+        .imagem-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: bottom;
+        }
+    
+        .nome-imagem {
+            margin-top: 8px;
+            font-size: 1em;
+        }
+    
+        .como-podemos {
+            display: flex;
+            flex-direction: column;
+            padding: 40px 50px;
+        }
+    
+        .conteudo-como-podemos p {
+            font-size: 1.2rem;
+        }
+    
+        .imagem-como-podemos,
+        .imagem-grupo {
+            width: 100%;
+            text-align: center;
+        }
+    
+        .imagem-como-podemos img,
+        .imagem-grupo img {
+            max-width: 100%;
+            height: auto;
+        }
+    
+        .estatisticas {
+            display: flex;
+            flex-direction: column;
+        }
+    
+        .estatisticas ul {
+            justify-content: center;
+        }
+    
+        .junte-se {
+                padding: 20px;
+                min-height: auto;
+            }
+        
+            .junte-se-amarelo {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+                padding: 20px;
+                width: 100%;
+                max-width: 400px;
+                margin: 0 auto;
+            }
+        
+            .junte-se-imagem {
+                grid-column: auto;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+        
+            .junte-se-imagem img {
+                width: 100%;
+                max-width: 300px;
+                height: auto;
+            }
+        
+            .junte-se-conteudo {
+                grid-column: auto;
+                text-align: center;
+                padding: 0 10px;
+            }
+        
+            .junte-se-conteudo h2 {
+                font-size: 1.9rem;
+                text-align: left;
+            }
+        
+            .junte-se-conteudo p {
+                text-align: left;
+                font-size: 1rem; 
+            }
+    
+        .servicos {
+            display: none;
+        }
+    
+        .sobre {
+            display: none;
+        }
+    
+        .carreira {
+            display: none;
+        }
+    
+    }

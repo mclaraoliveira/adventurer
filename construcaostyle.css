@@ -11,7 +11,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 10px 0;
+    padding: 15px 0;
     height: 12vh;
 }
 
@@ -19,7 +19,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 50px;
+    padding: 0px 50px;
 }
 
 .menu h1 {
@@ -47,6 +47,7 @@ a:visited {
 }
 
 .list-items li {
+    
     display: flex;
     align-items: center;
 }
@@ -87,7 +88,8 @@ a:visited {
     align-items: center;
     padding: 100px 60px;
     gap: 40px;
-    min-width: 800px;
+    max-width: 100%;
+    flex-wrap: wrap;
 }
 
 .conteudo-construcao h1 {
@@ -164,12 +166,82 @@ p {
     color: #666;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     header {
         background-color: #f8ce77;
-        padding: 10px 15px;
+        padding: 10px 0;
+        height: auto;
     }
 
+    .menu {
+        flex-direction: row;
+        position: relative;
+        padding: 0px 20px;
+    }
+
+    .menu h1 {
+        font-size: 1.5rem;
+    }
+
+    .list-items {
+        display: flex;
+        flex-direction: row; 
+        gap: 15px; 
+    }
+
+    .list-items li a {
+        padding: 5px 8px;
+        font-size: 0.9rem;
+    }
+
+    .inicie-sua-aventura {
+        display: none;
+    }
+
+
+    .imagem-construcao img {
+        max-width: 40vw;
+        height: auto;
+    }
+
+    .conteudo-construcao h1 {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .footer {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto auto;
+        padding: 30px;
+    }
+
+    .servicos {
+        grid-column: 1;
+        grid-row: 1;
+        text-align: center;
+    }
+
+    .sobre {
+        grid-column: 2;
+        grid-row: 1;
+        text-align: center;
+    }
+
+    .carreira {
+        grid-column: 3;
+        grid-row: 1;
+        text-align: center;
+    }
+
+    .redes-e-copyright {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        text-align: center;
+        margin-top: 30px;
+    }
+    }
+
+@media (max-width: 480px) {
     .menu {
         position: relative;
     }
@@ -177,7 +249,7 @@ p {
     .menu h1 {
         font-size: 30px;
         margin-top: 25px;
-        margin-left: -40px;
+        padding-bottom: 10px;
     }
 
     .menu::after {
@@ -185,7 +257,7 @@ p {
         font-size: 30px;
         font-weight: bold;
         position: absolute;
-        top: 65%;
+        top: 57%;
         right: 40px;
         transform: translateY(-50%);
         cursor: pointer;
@@ -195,9 +267,31 @@ p {
         display: none;
     }
 
-
     .inicie-sua-aventura {
         display: none;
+    }
+
+    .construcao {
+        flex-direction: column;
+        padding: 40px 20px;
+        min-width: auto;
+        text-align: center;
+    }
+
+    .imagem-construcao img {
+        max-width: 80%;
+        height: auto;
+        margin-bottom: 0px;
+    }
+
+    .conteudo-construcao {
+        margin-top: -20px;
+        margin-bottom: 200px;
+    }
+
+    .conteudo-construcao h1 {
+        font-size: 22px;
+        margin-top: 0;
     }
 
     .servicos {
@@ -210,11 +304,6 @@ p {
 
     .carreira {
         display: none;
-    }
-
-    .redes-e-copyright
-    {
-        margin-right: 150px;
     }
 
 }
